@@ -1,0 +1,1601 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif; /* 전체 페이지에 'Inter' 폰트를 사용 */
+}
+/* 전체 / 큰 레이아웃 */
+/* =====================================섹션1 ================================================*/
+/* sec1 섹션 */
+.sec1_wrap {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.sec1_bg {
+  background: url("../images/sec1_bg.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  padding: 5%;
+}
+
+.sec1_inner {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.sec1_title,
+.highlight {
+  font-family: "Inter", sans-serif;
+  font-weight: 350;
+  font-size: 3vw;
+  text-align: center;
+  line-height: 1.5;
+  color: #ffffff;
+  padding: 7% 0;
+}
+
+.highlight {
+  font-weight: bold;
+}
+/* .bubbles 컨테이너 스타일 */
+.bubbles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 11%;
+}
+
+.bubbles img {
+  width: 100%;
+  text-align: center;
+}
+
+/* .bubble_left와 .bubble_right의 스타일 */
+.bubble_left,
+.bubble_right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 말풍선 사이의 간격 설정 */
+}
+
+/* 개별 말풍선 조정 */
+.sp_bb1 {
+  padding-right: 10%; /* 왼쪽 여백 조정 */
+  margin-left: 15%;
+}
+
+.sp_bb2 {
+  padding-right: 20%; /* 오른쪽 여백 조정 */
+  margin-left: 10%;
+}
+
+.sp_bb3 {
+  padding-left: 20%; /* 왼쪽 여백 조정 */
+  margin-left: 20%;
+}
+
+.sp_bb4 {
+  padding-right: 25%; /* 오른쪽 여백 조정 */
+  margin-left: 5%;
+}
+
+.sp_bb5 {
+  padding-right: 5%; /* 왼쪽 여백 조정 */
+  margin-left: 25%;
+}
+.bubble_colums {
+  display: none;
+}
+/* ======================================================스크롤 버튼 */
+.next-sec-btn2 {
+  width: clamp(
+    20px,
+    4.2vw,
+    55px
+  ); /* 최소 55px, 최대 80px 사이에서 4.2vw에 맞춤 */
+  height: clamp(20px, 4.2vw, 55px); /* width와 동일하게 설정 */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.next-sec-btn2 img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sec1_title,
+  .highlight {
+    font-size: 4vw;
+  }
+  .bubbles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .bubble_left,
+  .bubble_right {
+    align-items: center;
+    margin-top: 20px;
+    display: none;
+  }
+  .sp_bb1 {
+    padding-right: 0%; /* 왼쪽 여백 조정 */
+    margin-left: 0%;
+    width: 85%;
+  }
+
+  .sp_bb2 {
+    padding-right: 0%; /* 오른쪽 여백 조정 */
+    margin-left: 0%;
+    width: 70%;
+  }
+
+  .sp_bb3 {
+    padding-left: 0%; /* 왼쪽 여백 조정 */
+    margin-left: 0%;
+    width: 70%;
+  }
+
+  .sp_bb4 {
+    padding-right: 0%; /* 오른쪽 여백 조정 */
+    margin-left: 0%;
+    width: 75%;
+  }
+
+  .sp_bb5 {
+    padding-right: 0%; /* 왼쪽 여백 조정 */
+    margin-left: 0%;
+    width: 75%;
+  }
+  .bubble_colums {
+    display: block;
+  }
+  .bb_colums > img {
+    padding-top: 5%;
+  }
+  .next-sec-btn2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bubble_colums {
+    padding: 7%;
+  }
+  .sec1_title,
+  .highlight {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .sec1_title,
+  .highlight {
+    font-size: 16px;
+  }
+}
+/* =====================================섹션1 ================================================*/
+
+/* 메인카피 */
+.main_copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 5%;
+}
+.copy_box {
+  max-width: 1300px;
+}
+.mcp_web {
+  width: 100%;
+  padding: 0 3%;
+}
+.mcp_tab {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mcp_web {
+    display: none;
+  }
+  .mcp_tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 5%;
+  }
+  .main_copy img {
+    width: 100%;
+    padding: 0 15%;
+  }
+}
+
+/* ============================강점============================================================== */
+/* 전체 래퍼 */
+.strength_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* padding-bottom: 5%; */
+  overflow: hidden;
+}
+
+/* 내부 래퍼 */
+.strength_inner {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* 전체 레이아웃의 너비를 화면에 맞춰 조정 */
+  max-width: 1300px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* 각 이미지와 텍스트를 감싸는 박스 */
+.item-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* 너비를 비율로 조정 (화면 크기에 맞게 조정) */
+}
+
+/* 각 이미지와 텍스트를 감싸는 박스 */
+.item-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* 이미지와 텍스트 박스의 고정 너비 */
+  overflow: hidden;
+}
+
+/* 이미지 박스 */
+.image-box1,
+.image-box2,
+.image-box3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.image-box1 img {
+  width: 400px;
+  height: 380px;
+  object-fit: cover; /* 이미지를 박스 크기에 맞춰 채우기 */
+}
+
+.image-box2 img,
+.image-box3 img {
+  width: 400px;
+  height: 380px;
+}
+
+/* 텍스트 박스 */
+.txt-box1,
+.txt-box2,
+.txt-box3 {
+  width: 100%; /* 부모 요소에 맞춰 텍스트 박스 크기 조정 */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  line-height: 1.7;
+  overflow: hidden;
+  padding: 5% 0;
+  /* margin-top: 5%; */
+}
+.m_txt {
+  font-size: 20px;
+}
+.grey_txt {
+  font-size: 18px;
+  color: #999;
+}
+
+@media (min-width: 769px) and (max-width: 1500px) {
+  .image-box1 img,
+  .image-box2 img,
+  .image-box3 img {
+    width: 250px;
+    height: 230px;
+    object-fit: cover; /* 이미지를 박스 크기에 맞춰 채우기 */
+  }
+  .txt-box1,
+  .txt-box2,
+  .txt-box3 {
+    padding: 0 2%;
+    margin-top: 5%;
+  }
+  .m_txt {
+    font-size: 17px;
+  }
+  .grey_txt {
+    font-size: 16px;
+    color: #999;
+  }
+}
+/* 768px 이하에서 레이아웃 조정 */
+@media (max-width: 768px) {
+  .strength_inner {
+    flex-direction: column; /* 세로 배열 */
+    align-items: center; /* 중앙 정렬 */
+  }
+  .image-box1,
+  .image-box2,
+  .image-box3 {
+    width: 100%; /* 너비 조정 */
+    margin-bottom: 0;
+    /* padding: 0; */
+  }
+
+  .image-box1 img {
+    padding: 3%;
+    max-width: 400px; /* 이미지 최대 너비 조정 */
+    min-width: 200px;
+    max-height: 380px;
+  }
+  .image-box2 img,
+  .image-box3 img {
+    padding: 3%;
+    max-width: 400px; /* 이미지 최대 너비 조정 */
+    min-width: 200px;
+    max-height: 360px;
+  }
+  .txt-box1,
+  .txt-box2,
+  .txt-box3 {
+    /* font-size: 17px; */
+    padding: 0;
+    margin-top: 0;
+    padding-bottom: 7%;
+  }
+  .m_txt {
+    font-size: 18px;
+  }
+  .grey_txt {
+    font-size: 16px;
+    color: #999;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-box1,
+  .image-box2,
+  .image-box3 {
+    margin-bottom: 0;
+    /* padding: 0 2%; */
+  }
+  .image-box1 img {
+    padding: 0 3%;
+    /* padding-bottom: 3%; */
+    max-width: 300px; /* 이미지 최대 너비 조정 */
+    min-width: 200px;
+    max-height: 300px;
+  }
+  .image-box2 img,
+  .image-box3 img {
+    padding: 3% 2%;
+    max-width: 300px; /* 이미지 최대 너비 조정 */
+    min-width: 200px;
+    max-height: 280px;
+    padding-bottom: 0;
+  }
+  .txt-box1,
+  .txt-box2,
+  .txt-box3 {
+    font-size: 16px;
+    padding-top: 1%;
+    padding-bottom: 5%;
+  }
+  .grey_txt {
+    font-size: 15px;
+  }
+}
+
+/* 360px 이하에서 레이아웃 조정 */
+@media (max-width: 360px) {
+  .item-box {
+    width: 100%; /* 너비 조정 */
+  }
+
+  .image-box1 img,
+  .image-box2 img,
+  .image-box3 img {
+    max-width: 250px; /* 이미지 최대 너비 조정 */
+    max-height: 250px;
+    padding: 2%;
+  }
+  .image-box2 img,
+  .image-box3 img {
+    max-width: 250px; /* 이미지 최대 너비 조정 */
+    max-height: 230px;
+  }
+  .txt-box1 img {
+    max-height: 38.25px;
+  }
+  .txt-box1 img,
+  .txt-box2 img,
+  .txt-box3 img {
+    max-width: 200px;
+    min-width: 100px;
+    max-height: 45px;
+  }
+  .txt-box1,
+  .txt-box2,
+  .txt-box3 {
+    font-size: 15px;
+    margin: 0;
+  }
+  .grey_txt {
+    color: #999;
+    font-size: 14px;
+  }
+}
+
+/* ==================================강점 끝=========================================================== */
+/* =================================비교=================================================================== */
+/* 제품비교 */
+.compare_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  padding: 0 5%;
+}
+.compare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+}
+.compare img {
+  width: 100%;
+}
+
+/* 기본 이미지는 기본적으로 보임 */
+.default-img {
+  display: block; /* 큰 화면에서 보임 */
+  width: 90%;
+}
+
+/* 대체 이미지는 기본적으로 숨김 */
+.mobile-img1,
+.mobile-img2 {
+  display: none; /* 큰 화면에서 숨김 */
+}
+
+@media (max-width: 768px) {
+  .compare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 3%;
+    padding: 0 10%;
+  }
+
+  /* 768px 이하에서는 기본 이미지를 숨기고 대체 이미지를 표시 */
+  .default-img {
+    display: none;
+  }
+  .mobile-img1 {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block; /* 작은 화면에서 보임 */
+  }
+  .mobile-img1 > img {
+    width: 100%;
+  }
+  .mobile-img2 {
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block; /* 작은 화면에서 보임 */
+  }
+}
+
+@media (max-width: 360px) {
+  .compare {
+    padding: 0 2%;
+  }
+  .mobile-img1 {
+    padding-top: 7%;
+  }
+}
+/* 구매버튼 */
+/* 비교와 갤러리 사이에 위치한 버튼을 감싸는 컨테이너 */
+.bbtn-container {
+  display: flex;
+  justify-content: center; /* 버튼을 가운데로 정렬 */
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+/* 버튼 스타일 */
+.bbtn {
+  box-sizing: border-box;
+  width: 400px;
+  height: 75px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bbtn:hover {
+  background-color: #111;
+  transition: 0.3s all ease;
+}
+#bbtn-color {
+  background-color: #fff;
+}
+
+/* 버튼 텍스트 스타일 */
+.bbtn .btn_txt {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 33px;
+  text-align: center;
+  color: #333333;
+  text-decoration: none;
+}
+.bbtn:hover .btn_txt {
+  color: #fff; /* 텍스트 색상을 흰색으로 변경 */
+  transition: color 0.3s ease; /* 부드러운 전환 효과 */
+}
+#bbtn-color:hover {
+  background-color: #111;
+  transition: 0.3s all ease;
+}
+.next-sec-btn img:hover {
+  opacity: 0.7;
+  transition: 0.3s all ease;
+}
+.next-sec-btn2 img:hover {
+  opacity: 0.7;
+  transition: 0.3s all ease;
+}
+/* @media (min-width: 769px) and (max-width: 1600px){
+  .bbtn {
+    height: 45px;
+    width: 400px;
+  }
+  .bbtn .btn_txt {
+    font-size: 16px;
+  }
+} */
+/* 반응형 조정 */
+@media (max-width: 768px) {
+  .bbtn {
+    height: 55px;
+    width: 40%;
+  }
+  .bbtn .btn_txt {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bbtn-container {
+    display: flex;
+    justify-content: center; /* 버튼을 가운데로 정렬 */
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .bbtn {
+    width: 45%;
+    height: 45px;
+  }
+  .bbtn .btn_txt {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .bbtn-container {
+    display: flex;
+    justify-content: center; /* 버튼을 가운데로 정렬 */
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .bbtn {
+    width: 50%;
+    height: 40px;
+  }
+  .bbtn .btn_txt {
+    font-size: 13px;
+  }
+}
+
+/* ============================세일즈============================================================== */
+/* 세일즈 */
+
+/* 메인 영역 배치 */
+.det2-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.rank {
+  display: flex;
+}
+
+.det2 .inner {
+  width: 100%;
+  max-width: 1300px;
+  display: block;
+  margin: 0 auto;
+  /* padding: 50px 20px; */
+}
+
+.det2-top {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-top: 50px;
+}
+span.small {
+  font-size: 30px;
+}
+span.number {
+  font-size: 70px;
+  font-weight: bold;
+  color: #000;
+  display: inline-block;
+  width: 250px; /* 숫자의 최대 크기에 맞는 고정된 너비 설정 */
+  text-align: right; /* 숫자가 오른쪽 정렬되도록 설정 */
+  font-feature-settings: "tnum"; /* 숫자 너비를 일정하게 유지 */
+  font-variant-numeric: tabular-nums; /* 숫자의 일관된 너비 유지 */
+  letter-spacing: -2.5px;
+}
+span.smallp {
+  font-size: 40px;
+  font-weight: bold;
+}
+span.one {
+  font-size: 70px;
+  font-weight: bold;
+}
+span.middlep {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.test1,
+.test2,
+.test3,
+.test4 {
+  display: flex;
+  justify-content: flex-start; /* 수평 정렬 (왼쪽 정렬) */
+  align-items: flex-end;
+  flex-direction: column;
+}
+/* 메인 영역 배치 */
+.det2-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+span.small {
+  margin-right: clamp(8px, 2vw, 20px); /* 작은 화면에서도 간격 유지 */
+}
+
+.test1,
+.test2,
+.test3,
+.test4 {
+  /* margin-bottom: clamp(8px, 2vw, 15px); 작은 화면에서도 간격 유지 */
+}
+
+/* 768px 이상의 화면에서는 한 줄에 2개의 요소가 배치 */
+.rank {
+  flex: 1 1 calc(50% - 20px); /* 50% 너비와 간격을 설정하여 두 개씩 배치 */
+  box-sizing: border-box;
+  padding: 20px;
+  /* margin-bottom: 20px; */
+  /* background-color: #EDE6DB; */
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out; /* 화면 크기 변화에 자연스럽게 반응 */
+}
+
+.small {
+  margin-right: 20px; /* 좌측과 우측 요소 사이에 여백 설정 */
+}
+.det2-top {
+  font-size: clamp(
+    20px,
+    5vw,
+    50px
+  ); /* 최소 20px, 최대 50px, 5vw 비율로 폰트 크기 조정 */
+  font-weight: bold;
+}
+
+.number {
+  font-size: clamp(
+    30px,
+    4vw,
+    70px
+  ); /* 최소 30px, 최대 70px, 4vw 비율로 폰트 크기 조정 */
+  font-weight: bold;
+}
+.date {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 작은 화면에서는 1줄에 1개씩 배치
+@media screen and (max-width: 768px) {
+  .rank {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+} */
+
+/* 기본 텍스트 스타일 */
+
+/* 폰트 크기를 화면 크기에 맞게 자동 조정 */
+.det2-top h1 {
+  font-size: clamp(22px, 6vw, 50px); /* 최소 24px, 최대 50px */
+}
+
+span.small {
+  font-size: clamp(16px, 3vw, 30px); /* 작은 텍스트도 화면 크기에 맞춰 조정 */
+  margin-right: clamp(
+    10px,
+    2vw,
+    30px
+  ); /* 오른쪽에 공간을 추가하여 .test와 간격 조정 */
+}
+
+span.number {
+  margin-left: 30px;
+  font-size: clamp(
+    30px,
+    6vw,
+    70px
+  ); /* 폰트 크기는 화면 크기에 맞춰 유동적으로 조정 */
+  font-weight: bold;
+  display: inline-block;
+  width: auto; /* 고정된 너비를 제거하여 유연한 너비 설정 */
+  min-width: 100px; /* 최소 너비를 설정하여 숫자 크기에 맞게 유지 */
+  max-width: 250px; /* 최대 너비를 설정하여 요소가 너무 커지지 않도록 제한 */
+  text-align: right; /* 숫자가 오른쪽 정렬되도록 설정 */
+  font-feature-settings: "tnum"; /* 숫자 너비를 일정하게 유지 */
+  font-variant-numeric: tabular-nums; /* 숫자의 일관된 너비 유지 */
+  letter-spacing: -3.5px; /* 숫자 사이의 간격 조정 */
+  margin-bottom: clamp(5px, 1.5vw, 10px); /* 숫자 아래에 여백 추가 */
+}
+span.smallp {
+  font-size: clamp(20px, 5vw, 40px); /* 화면 크기에 따라 자연스럽게 변경 */
+}
+
+span.one {
+  font-size: clamp(30px, 6vw, 70px);
+  font-weight: bold;
+}
+
+span.middlep {
+  font-size: clamp(14px, 4vw, 30px);
+  font-weight: bold;
+}
+.test1,
+.test2,
+.test3,
+.test4 {
+  display: flex;
+  justify-content: flex-start; /* 수평 정렬 (왼쪽 정렬) */
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: clamp(10px, 3vw, 20px); /* 아래쪽에 공간 추가 */
+}
+@media screen and (max-width: 1024px) {
+  .number {
+    font-size: 50px;
+  }
+  .rank {
+    flex: 1 1 100%; /* 한 줄에 1개씩 배치 */
+  }
+
+  .det2-main {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr; /* 한 줄에 한 개씩 배치 */
+    grid-template-areas:
+      "main1-1"
+      "main2-1"
+      "main1-2"
+      "main2-2"; /* 원하는 순서대로 영역 배치 */
+  }
+  span.number {
+    margin-left: 30px;
+    font-size: clamp(70px, 6vw, 90px);
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+    min-width: 100px;
+    max-width: 250px;
+    text-align: right;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -3.5px;
+    margin-bottom: clamp(5px, 1.5vw, 10px);
+  }
+
+  /* 각 영역을 grid 영역으로 지정 */
+  .det2-main1-1 {
+    grid-area: main1-1;
+  }
+
+  .det2-main2-1 {
+    grid-area: main2-1;
+  }
+
+  .det2-main1-2 {
+    grid-area: main1-2;
+  }
+
+  .det2-main2-2 {
+    grid-area: main2-2;
+  }
+
+  /* 각 요소가 세로로 100% 너비를 차지하도록 */
+  .det2-main1-1,
+  .det2-main1-2,
+  .det2-main2-1 {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  span.small {
+    font-size: clamp(38px, 3vw, 30px);
+    margin-right: clamp(10px, 2vw, 30px);
+  }
+}
+
+/* 작은 화면에서 배치 변경 */
+@media screen and (max-width: 768px) {
+  .rank {
+    flex: 1 1 calc(50% - 10px); /* 320px 이하에서도 두 개의 요소가 배치되도록 */
+    padding: 26px;
+  }
+
+  .det2-main {
+    padding: 20px; /* 작은 화면에서 여백 조정 */
+  }
+  span.small {
+    font-size: clamp(30px, 2vw, 20px); /* 텍스트 크기를 더 작게 조정 */
+  }
+  span.number {
+    font-size: clamp(60px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    min-width: 30px;
+  }
+  span.one {
+    font-size: clamp(60px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    letter-spacing: -1px;
+    margin-left: 0px;
+  }
+  span.smallp {
+    font-size: clamp(40px, 3.5vw, 32px);
+  }
+  span.middlep {
+    font-size: clamp(40px, 3vw, 20px);
+  }
+
+  .det2-main {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  span.date {
+    font-size: 20px;
+  }
+
+  .det2-main {
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+  }
+
+  /* 요소들의 순서 변경 */
+  .det2-main1-1 {
+    order: 1;
+  }
+
+  .det2-main2-1 {
+    order: 2;
+  }
+
+  .det2-main1-2 {
+    order: 3;
+  }
+
+  .det2-main2-2 {
+    order: 4;
+  }
+}
+@media screen and (max-width: 600px) {
+  .rank {
+    flex: 1 1 calc(50% - 10px); /* 320px 이하에서도 두 개의 요소가 배치되도록 */
+  }
+
+  .det2-main {
+    padding-top: 20px; /* 작은 화면에서 여백 조정 */
+  }
+  span.small {
+    font-size: clamp(24px, 2vw, 20px); /* 텍스트 크기를 더 작게 조정 */
+  }
+  span.number {
+    font-size: clamp(50px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    min-width: 30px;
+  }
+  span.one {
+    font-size: clamp(50px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    letter-spacing: -1px;
+    margin-left: 0px;
+  }
+  span.smallp {
+    font-size: clamp(30px, 3.5vw, 32px);
+  }
+  span.middlep {
+    font-size: clamp(30px, 3vw, 20px);
+  }
+
+  .det2-main {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  span.date {
+    font-size: 14px;
+  }
+}
+/* 작은 화면에서의 요소 간격 및 크기 조정 */
+@media screen and (max-width: 480px) {
+  .rank {
+    flex: 1 1 calc(50% - 10px); /* 320px 이하에서도 두 개의 요소가 배치되도록 */
+    padding: 15px;
+  }
+
+  .det2-main {
+    padding-top: 20px; /* 작은 화면에서 여백 조정 */
+  }
+  span.small {
+    font-size: clamp(20px, 2vw, 22px); /* 텍스트 크기를 더 작게 조정 */
+  }
+  span.number {
+    font-size: clamp(40px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    min-width: 30px;
+  }
+  span.one {
+    font-size: clamp(40px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    letter-spacing: -1px;
+    margin-left: 0px;
+  }
+  span.smallp {
+    font-size: clamp(20px, 3.5vw, 32px);
+  }
+  span.middlep {
+    font-size: clamp(20px, 3vw, 20px);
+  }
+
+  .det2-main {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  span.date {
+    font-size: 13px;
+  }
+  .det2-top h1 {
+    font-size: clamp(30px, 6vw, 50px);
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .rank {
+    flex: 1 1 calc(50% - 10px); /* 320px 이하에서도 두 개의 요소가 배치되도록 */
+  }
+
+  .det2-main {
+    padding-top: 20px; /* 작은 화면에서 여백 조정 */
+  }
+  span.small {
+    font-size: clamp(18px, 2vw, 20px); /* 텍스트 크기를 더 작게 조정 */
+  }
+  span.number {
+    font-size: clamp(32px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+  }
+  span.one {
+    font-size: clamp(30px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    letter-spacing: -1px;
+    margin-left: 0px;
+  }
+  span.smallp {
+    font-size: clamp(20px, 3.5vw, 32px);
+  }
+  span.middlep {
+    font-size: clamp(20px, 3vw, 20px);
+  }
+
+  .det2-main {
+    padding-top: 20px;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  span.date {
+    font-size: 10px;
+  }
+  .det2 .inner {
+    padding-top: 20px;
+  }
+  .det2-top h1 {
+    font-size: clamp(24px, 6vw, 50px);
+    line-height: 40px;
+  }
+  .det2-top {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .det2-top {
+    margin-top: 0px;
+  }
+  .det2 .inner {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .rank {
+    flex: 1 1 calc(50% - 10px); /* 320px 이하에서도 두 개의 요소가 배치되도록 */
+  }
+
+  .det2-main {
+    padding-top: 20px; /* 작은 화면에서 여백 조정 */
+    padding-bottom: 0px;
+  }
+
+  /* 폰트 크기와 요소 간격 조정 */
+
+  span.small {
+    font-size: clamp(16px, 2vw, 20px); /* 텍스트 크기를 더 작게 조정 */
+  }
+  span.number {
+    font-size: clamp(30px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+  }
+  span.one {
+    font-size: clamp(28px, 3vw, 50px); /* 숫자 폰트 크기 조정 */
+    letter-spacing: -1px;
+    margin-left: 0px;
+  }
+  span.smallp {
+    font-size: clamp(20px, 3.5vw, 32px);
+  }
+  span.middlep {
+    font-size: clamp(20px, 3vw, 20px);
+  }
+}
+
+/* ============================갤러리============================================================== */
+/* 갤러리랩 */
+.pp-descriptions {
+  width: 100%;
+  color: #000000;
+  background-color: #080808;
+}
+
+.pp-det-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pp-det-bg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pp-det-inner {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* 서브타이틀 관련 */
+.pp-det-txtwrap {
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.pp-det-txtwrap2 {
+  display: none;
+}
+/* 갤러리 타이틀 */
+.pp-det-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5% 0;
+  color: #fff;
+}
+.pp-det-title img {
+  width: 40%;
+}
+/* 갤러리 아이템 확대 */
+.gallery li.open {
+  flex: 3;
+  transition: flex 0.7s ease; /* 딜레이를 줄이고, 빠르게 반응하도록 설정 */
+}
+
+/* 텍스트 아이템 확대 */
+.open-text {
+  font-size: 2em;
+  font-weight: bold;
+  transition: font-size 0.7s ease;
+  margin-bottom: 30px;
+  flex: 0.6;
+  text-align: center;
+  color: #fff;
+}
+
+/* 나머지 텍스트 아이템 축소 */
+.shrink-text {
+  font-size: 0.8em;
+  transition: font-size 0.5s cubic-bezier(0, -0.19, 0.7, -0.11);
+  opacity: 0.7; /* 선택 사항: 축소된 텍스트의 불투명도 조정 */
+  color: #fff;
+}
+
+.pp-det-imgwrap {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 갤러리 */
+.gallery {
+  width: 100%;
+  height: 700px;
+  display: flex;
+}
+.gallery img {
+  width: 90%;
+  height: 700px;
+}
+.gallery li {
+  flex: 1;
+  border: 1px solid #333;
+  transition: all 0.5s ease; /* 애니메이션 추가 */
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  /* GIF 이미지 애니메이션 멈추기 */
+  background-repeat: no-repeat;
+}
+.gallery li:hover {
+  flex: 4;
+}
+.gallery li:hover:first-child {
+  background-position: left center;
+}
+
+.gallery li .contants {
+  transition: transform 0.5s ease, font-size 0.5s ease;
+  position: absolute;
+  bottom: -310px;
+  left: 50%;
+  transform: translateX(-50%); /* 텍스트를 중앙으로 배치 */
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  height: 150px;
+  padding: 20px;
+  padding-top: 20px;
+  line-height: 1.6;
+  transition: bottom 0.5s ease, font-size 0.5s ease;
+  opacity: 0.8;
+}
+
+.gallery li:hover .contants {
+  bottom: 0;
+}
+
+/* 호버하지 않은 나머지 텍스트들 축소 및 양쪽으로 밀어내기 */
+.gallery li:not(:hover) .pp-det-txtwrap {
+  font-size: 0.8em; /* 축소된 텍스트 크기 */
+  text-align: center;
+  opacity: 0.5; /* 불투명도 조정 */
+  transform: translateX(-50%) scale(0.8); /* 살짝 밀려나고 작아짐 */
+  transition: transform 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+}
+
+.contants::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 41px;
+  top: -20px;
+  left: 0;
+  transform: rotate(-5deg) scale(1.3);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.contants h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contants p {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+/* 애니메이션 멈춤과 투명도 조절 */
+.gallery li.paused {
+  opacity: 0.5; /* 투명도 줄이기 */
+}
+
+.gallery li.paused img {
+  animation-play-state: paused; /* 애니메이션 멈춤 */
+}
+
+/* 호버 시 텍스트 컨텐츠 확대 및 표시 */
+.gallery li:hover .contants {
+  bottom: 0;
+  font-size: 2em; /* 폰트 크기 확대 */
+  opacity: 0.8; /* 완전 불투명 */
+}
+.contants {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===========================================버튼============================= */
+.bbtn-container2 {
+  display: flex;
+  justify-content: center; /* 버튼을 가운데로 정렬 */
+  margin-bottom: 7%;
+  margin-top: 5%;
+}
+
+/* 버튼 스타일 */
+.bbtn2 {
+  box-sizing: border-box;
+  width: 400px;
+  height: 75px;
+  border: 1px solid #ececec;
+  border-radius: 2px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bbtn2:hover {
+  background-color: #f7f7f7;
+  transition: 0.3s all ease;
+}
+#bbtn-color2 {
+  background-color: #080808;
+}
+/* 버튼 텍스트 스타일 */
+.bbtn2 .btn_txt2 {
+  font-family: "inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 33px;
+  text-align: center;
+  color: #e4e4e4;
+  text-decoration: none;
+}
+.bbtn2:hover .btn_txt2 {
+  color: #0c0c0c; /* 텍스트 색상을 흰색으로 변경 */
+  transition: color 0.3s ease; /* 부드러운 전환 효과 */
+}
+#bbtn-color2:hover {
+  background-color: white;
+  transition: 0.3s all ease;
+}
+
+@media (max-width: 768px) {
+  .bbtn-container2 {
+    width: 100%;
+  }
+  .bbtn2 {
+    position: relative;
+    height: 55px;
+    width: 40%;
+    z-index: 1;
+  }
+  .bbtn2 .btn_txt2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bbtn-container2 {
+    display: flex;
+    justify-content: center; /* 버튼을 가운데로 정렬 */
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .bbtn2 {
+    width: 45%;
+    height: 45px;
+  }
+  .bbtn2 .btn_txt2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .bbtn-container2 {
+    display: flex;
+    justify-content: center; /* 버튼을 가운데로 정렬 */
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .bbtn2 {
+    width: 50%;
+    height: 40px;
+  }
+  .bbtn2 .btn_txt2 {
+    font-size: 13px;
+  }
+}
+/* ===========================================버튼============================= */
+
+.next-sec-btn2 img:hover {
+  opacity: 0.7;
+  transition: 0.3s all ease;
+}
+
+/* Swiper 컨테이너에 대한 스타일 */
+.swiper.sw-gallery {
+  width: 100%;
+  display: none;
+}
+.swiper-slide {
+  overflow: hidden;
+}
+/* Swiper 슬라이드 컨텐츠 스타일 */
+.swiper-slide .contants {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: -50%; /* 갤러리와 동일하게 하단 정렬 */
+  left: 50%;
+  transform: translate(-50%, 100%); /* 수평 중앙 정렬 */
+  background-color: rgba(0, 0, 0, 1); /* 투명한 검정 배경 */
+  color: #fff;
+  text-align: center;
+  padding: 5px; /* 패딩 동일하게 설정 */
+  line-height: 1.5; /* 줄 높이 동일하게 설정 */
+  opacity: 0.8; /* 불투명도 조정 */
+  z-index: 1;
+  /* overflow: hidden; */
+}
+.swiper-slide .contants::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 650px; /* 부모 요소의 너비를 유지 */
+  height: 80px;
+  top: -40px;
+  left: 0;
+  transform: rotate(-5deg); /* 각도 유지 */
+  z-index: -1;
+  overflow: hidden; /* 이미지 밖으로 넘치지 않도록 */
+}
+
+.slide_img_box {
+  width: 100%;
+  display: block;
+}
+.slide_img_box img {
+  width: 100%;
+  display: block; /* 이미지 하단 여백 제거 */
+}
+
+/* 내비게이션 버튼 hover 상태 */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* hover 시 배경색 조정 */
+}
+.swiper-pagination {
+  position: relative;
+  display: block;
+  padding-top: 5%;
+}
+
+.swiper-pagination::before {
+  /* position: relative; */
+  content: "";
+  width: 90px; /* 선의 길이를 줄임 */
+  height: 2px; /* 선의 두께를 줄임 */
+  background-color: #999;
+  position: absolute;
+  bottom: 11%; /* 불릿과 일치하게 수직 위치 조정 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.swiper-pagination-bullet {
+  width: 11px; /* 불릿 너비를 축소 */
+  height: 11px; /* 불릿 높이를 축소 */
+  background-color: #999;
+  border-radius: 50%; /* 둥근 모양 유지 */
+  opacity: 1; /* 불투명도 약간 감소 */
+  margin: 0 3px; /* 불릿 간의 간격도 축소 */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  z-index: 20;
+  transform: scale(1); /* 활성화된 불릿 살짝 확대 */
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .pp-det-title img {
+    width: 70%;
+  }
+  .pp-det-title {
+    padding: 15% 0;
+  }
+  .gallery {
+    display: none; /* 기본 갤러리를 숨김 */
+  }
+  .pp-det-txtwrap {
+    display: none; /* 텍스트랩 숨김 */
+  }
+  .slide_img_box img {
+    width: 100%;
+  }
+  .swiper-slide .contants {
+    bottom: 19.5%;
+  }
+  .swiper.sw-gallery {
+    display: block;
+  }
+  .pp-det-txtwrap2 {
+    padding-top: 5%;
+    display: flex;
+    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    justify-content: space-between; /* 항목 간격 조정 */
+  }
+
+  .pp-det-txtwrap2 div {
+    flex: 1 1 calc(33.33% - 10px); /* 3개씩 배치, 간격 고려 */
+    margin: 5px; /* 항목 간 간격 */
+    text-align: center; /* 중앙 정렬 */
+    cursor: pointer; /* 클릭 가능 표시 */
+    transition: color 0.3s ease; /* 색상 변화 애니메이션 */
+  }
+
+  .pp-det-txtwrap2 div.active {
+    font-weight: bold; /* 클릭 시 볼드 처리 */
+  }
+
+  .pp-det-txtwrap2 div.inactive {
+    color: gray; /* 비활성화된 텍스트 회색 */
+  }
+  .swiper-pagination::before {
+    bottom: 12%; /* 불릿과 일치하게 수직 위치 조정 */
+  }
+}
+
+@media (min-width: 631px) and (max-width: 700px) {
+  .swiper-pagination::before {
+    bottom: 12%;
+  }
+  .contants p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 630px) {
+  .contants p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 580px) {
+  .swiper-slide .contants {
+    bottom: 25%;
+  }
+  .contants p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 441px) and (max-width: 489px) {
+  .slide_img_box img {
+    width: 100%;
+  }
+  .swiper-slide .contants {
+    bottom: 25%;
+  }
+  .swiper-pagination::before {
+    bottom: 13.5%;
+  }
+  .swiper-slide .contants p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 440px) {
+  .swiper-slide .contants {
+    bottom: 30%;
+  }
+  .swiper-pagination::before {
+    bottom: 16%;
+  }
+  .contants p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 290px) and (max-width: 360px) {
+  .slide_img_box img {
+    width: 100%;
+  }
+  .swiper-slide .contants {
+    bottom: 40%;
+  }
+  .swiper-pagination {
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+  }
+  .swiper-pagination::before {
+    bottom: 14%;
+  }
+  .swiper-slide .contants p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 200px) and (max-width: 289px) {
+  .swiper-slide .contants {
+    bottom: 50%;
+  }
+  .contants p {
+    font-size: 14px;
+  }
+  .swiper-pagination::before {
+    bottom: 20%;
+  }
+}
+/* ===================================갤러리 끝====================== */

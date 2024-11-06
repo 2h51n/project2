@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+.visual{
+    width: 100%;
+    position: relative;
+}
+.visual video{
+    width: 100%;
+    display: block;
+}
+.sw-visual > .swiper-slide{
+    height: 100%;
+}
+/*  */
+.next-sec-btn{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+}
+.next-sec-btn img{
+    width: 100%;
+}
+.buy-img{
+width: 13vw;
+position: absolute;
+right: 9%;
+top: 45%;
+transform: translateY(-50%);
+z-index: 99;
+/* border-bottom: 4px solid #fff;
+padding-bottom: 5px; */
+border: 4px solid #fff;
+border-radius: 50px;
+padding: 10px 20px;
+}
+.buy-img img{
+    width: 100%;
+}
+.buy-img:hover{
+    opacity: 0.7;
+    transition: 0.3s all ease;
+}
+/* 반응형 */
+@media screen and (max-width:1280px) {
+    .next-sec-btn{
+        bottom: 13%;
+        width: 4.2vw;
+    }
+    .buy-img{
+        width: 13vw;
+        border-bottom: 3px solid #fff;
+        right: 7%;
+        top: 50%;
+    }
+    .buy-img img{
+
+    }
+}
+@media screen and (max-width:1024px) {
+    .buy-img{
+        border: 3px solid #fff;
+    }
+    .buy-img img{
+        transform: scale(1.1);
+    }
+}
+@media screen and (max-width:860px) {
+    .buy-img{
+        border: 2px solid #fff;
+    }
+    .buy-img img{
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .visual{
+        padding-top: 12vw;
+    }
+    .next-sec-btn{
+        bottom: 10%;
+        width: 40px;
+    }
+    .buy-img{
+        width: 20vw;
+        border-bottom: 2px solid #fff;
+        right: 5%;
+        top: 50%;
+    }
+    .next-sec-btn{
+        display: none;
+    }
+    .buy-img{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .next-sec-btn{
+        bottom: 5%;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .next-sec-btn{
+        display: none;
+    }
+    .buy-img{
+        display: none;
+    }
+}

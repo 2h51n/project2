@@ -1,0 +1,391 @@
+@charset "utf-8";
+/* 영역별 css */
+@import url(header.css);
+@import url(main_video.css);
+@import url(introduction.css);
+@import url(review.css);
+@import url(footer.css);
+@import url(event.css);
+/* 폰트 */
+/* inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+img{
+    display: block;
+}
+/* 이벤트 참여하기 버튼의 스타일 */
+.event-participate-btn {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    z-index: 100; /* 기존 버튼 위에 나타나게 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* 기본적으로 숨김 상태 */
+    
+}
+/* .event-btn{
+    animation: updown 1.5s infinite;
+} */
+/* 애니메이션 효과 */
+@keyframes updown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+
+/* 탑버튼 */
+.cs-btn-event{
+    position: fixed;
+    bottom: 200px;
+    right: 27px;
+    z-index: 99;
+    cursor: pointer;
+    animation: updown 1.5s infinite;
+}
+.cs-btn{
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    z-index: 99;
+    cursor: pointer;
+}
+.cs-btn-kakao{
+    position: fixed;
+    bottom: 80px;
+    right: 29px;
+    z-index: 98;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.cs-btn-naver{
+    position: fixed;
+    bottom: 80px;
+    right: 29px;
+    z-index: 98;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.cs-btn-kakao.show{
+    opacity: 1;
+    transform: translateX(-60px);
+}
+.cs-btn-naver.show{
+    opacity: 1;
+    transform: translateX(-120px);
+}
+.top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 99;
+    cursor: pointer;
+}
+.fix-buy-btn{
+    position: fixed;
+    bottom: 140px;
+    right: 25px;
+    z-index: 98;
+}
+.fix-buy-btn img:nth-child(2){
+    display: none;
+}
+.fix-buy-btn:hover img:nth-child(2){
+    display: block;
+}
+.fix-buy-btn:hover img:nth-child(1){
+    display: none;
+}
+.fixBtn{
+    width: 50px;
+    height: 50px;
+}
+.fixBtn img{
+    width: 100%;
+}
+/* 기존 cs-btn-event 스타일 */
+.cs-btn-event {
+    position: fixed;
+    bottom: 200px;
+    right: 27px;
+    z-index: 99;
+    cursor: pointer;
+    animation: updown 1.5s infinite;
+  }
+  
+  .fixBtn {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .fixBtn img {
+    width: 100%;
+  }
+  
+  /* 이미지 기반 말풍선 스타일 */
+  .tooltip {
+    position: absolute;
+    bottom: 60px; /* 버튼 위에 말풍선 이미지 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px; /* 말풍선 이미지의 너비 */
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tooltip img {
+    width: 100%;
+   
+  }
+  
+  /* 텍스트를 이미지 안에 배치 */
+  .tooltip-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: "Noto Sans KR", sans-serif;
+    transition: color 0.5s ease; /* 텍스트 색상이 0.5초에 걸쳐 부드럽게 변경됨 */
+  }
+ 
+  /* 마우스를 올렸을 때 말풍선 보이기 */
+  .cs-btn-event:hover .tooltip {
+    opacity: 1;
+  }
+/* .fix-buy-btn a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+ /* 모달창 */
+ /* 모달 컨테이너 */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    z-index: 9999; /* 가장 앞에 위치 */
+    left: 0;
+    top: 0;
+    width: 100%;
+height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 검정 배경 투명도 */
+}
+
+/* 모달 콘텐츠 */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    padding: 0;
+    width: 400px; /* 팝업 크기 */
+    border-radius: 10px;
+}
+
+/* 닫기 버튼 및 '오늘 하루 열지 않음' */
+.close-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    vertical-align: middle;
+}
+.close-wrap .notToday{
+    vertical-align: middle !important;
+}
+.close-wrap input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.close-btn {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.close-btn:hover {
+    color: #aaa;
+}
+
+
+/* 이미지 스타일 */
+.modal-content img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+input[type="checkbox"]{
+    vertical-align: middle;
+}
+
+/* 반응형 조정 */
+
+
+@media screen and (max-width:768px) {
+    .tooltip-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+        font-family: "Noto Sans KR", sans-serif;
+        transition: color 0.5s ease;
+    }
+    /* .fixBtn{
+        transform: scale(0.9);
+    } */
+    .fixBtn img{
+        transform: scale(0.8);
+    }
+    /* .cs-btn-event{
+        transform: scale(1);
+    } */
+ .modal-content {
+            width: 60%; /* 화면 너비의 80%로 조정 */
+        }
+        .cs-btn-event img {
+            /* max-width: 40.6px; 작은 화면에서는 크기를 더 줄임 */
+            right: 25px;
+        }
+        .cs-btn-event {
+            position: fixed;
+            bottom: 145px;
+            right: 12px;
+            z-index: 99;
+            cursor: pointer;
+            animation: updown 1.5s infinite;
+        }
+        .fix-buy-btn{
+            right: 10px;
+            bottom: 100px;
+        }
+        .top-btn{
+            right: 10px;
+            bottom: 10px;
+        }
+        .cs-btn{
+            right: 10px;
+            bottom: 55px;
+        }
+        .cs-btn-kakao,.cs-btn-naver{
+            right: 10px;
+            bottom: 55px;
+        }
+        .cs-btn-kakao.show{
+            opacity: 1;
+            transform: translateX(-45px);
+        }
+        .cs-btn-naver.show{
+            opacity: 1;
+            transform: translateX(-90px);
+        }
+    }
+@media screen and (max-width:564px){
+    input[type="checkbox"] {
+        transform: scale(0.8); /* 80% 크기로 줄이기 */
+        -webkit-transform: scale(0.8); /* 크롬 및 사파리 호환 */
+        -moz-transform: scale(0.8); /* 파이어폭스 호환 */
+        -o-transform: scale(0.8); /* 오페라 호환 */
+        -ms-transform: scale(0.8); /* IE 호환 */
+    }
+    .close-btn{
+        transform: scale(0.9);
+    }
+    .close-wrap .notToday{
+        font-size: 12px;
+    }
+    .close-wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px;
+        background-color: black;
+        color: white;
+        align-items: center;
+        
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+@media screen and (max-width:425px){
+    .modal-content {
+        width: 80%; /* 화면 너비의 90%로 조정 */
+    }
+    input[type="checkbox"] {
+        transform: scale(0.95); /* 80% 크기로 줄이기 */
+        -webkit-transform: scale(0.95); /* 크롬 및 사파리 호환 */
+    }
+    .close-btn{
+        transform: scale(0.9);
+    }
+    .close-wrap .notToday{
+        font-size: 13px;
+    }
+    .close-wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        align-items: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+/* 320px 이하의 화면에서 모달 창 크기 조정 */
+@media screen and (max-width: 320px) {
+    .modal-content {
+        width: 90%; /* 화면 너비의 90%로 조정 */
+    }
+    input[type="checkbox"] {
+        transform: scale(0.7); 
+        -webkit-transform: scale(0.7); /* 크롬 및 사파리 호환 */
+    }
+    .close-btn{
+        transform: scale(0.7);
+    }
+}

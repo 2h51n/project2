@@ -1,0 +1,555 @@
+.event {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.event .inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  /* margin-bottom: 60px; */
+}
+
+/* 이미지 컨테이너 스타일 */
+.image-container {
+  position: relative;
+  display: block;
+}
+
+/* 이미지 스타일 */
+.image-container img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 이벤트 폼 스타일 */
+.event-wrap {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  display: block;
+}
+.event-form {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+/* 성함과 번호 입력 영역 */
+
+.name-flex,
+.phone-flex {
+  display: flex;
+  align-items: center; /* 레이블과 입력 필드 수평 정렬 */
+  margin-bottom: 15px; /* 레이블과 입력 필드 그룹 사이의 간격 */
+}
+
+.name-flex label,
+.phone-flex label {
+  width: 80px; /* 레이블의 고정된 너비 */
+  margin-right: 20px; /* 레이블과 입력 필드 사이의 간격 */
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-align: left; /* 레이블 텍스트 정렬 */
+}
+
+.event-form input {
+  flex: 1; /* 입력 필드가 남은 공간을 차지하도록 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  min-width: 350px;
+  width: 100%;
+}
+
+/* 버튼 스타일 */
+.event-form button {
+  margin-top: 30px;
+  max-width: 240px;
+  width: 100%;
+  padding: 10px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 90px;
+}
+.event-form button:hover {
+  background-color: #dfb371;
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+.submitwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image-container-tab{
+  display: none;
+}
+@media screen and (max-width : 1024px) {
+  .name-flex label,
+  .phone-flex label {
+    width: 65px; /* 레이블의 고정된 너비 */
+    margin-right: 10px; /* 레이블과 입력 필드 사이의 간격 */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* 레이블 텍스트 정렬 */
+  }
+  .event-form input {
+    flex: 1;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 260px;
+    width: 100%;
+  }
+    .event-form button {
+      margin-top: 20px;
+      max-width: 200px;
+      width: 100%;
+      padding: 8px;
+      background-color: #dec6a1;
+      border: none;
+      border-radius: 70px;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+}
+@media screen and (max-width: 880px) {
+  .name-flex label, .phone-flex label {
+    width: 50px;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+}
+.event-form button {
+  margin-top: 10px;
+  max-width: 180px;
+  width: 100%;
+  padding: 6px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.event-form {
+  padding: 15px;
+  
+}
+}
+@media screen and (max-width: 800px) {
+  .name-flex label, .phone-flex label {
+    width: 40px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.event-form input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  min-width: 220px;
+  width: 100%;
+}
+.event-form button {
+  margin-top: 5px;
+  max-width: 160px;
+  width: 100%;
+  padding: 5px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.event-form {
+  padding: 10px;
+}
+}
+@media screen and (min-width: 769px) {
+  .image-container {
+    display: block;
+  }
+  .image-container-tab {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .submitbtn{
+    margin-left: 10px;
+  }
+  .image-container {
+    display: none;
+  }
+  .image-container-tab {
+    display: block;
+  } 
+  .image-container-tab {
+    display: block;
+    position: relative;
+  }
+  .image-container-tab img{
+    width: 100%;
+  }
+  .success-message {
+    display: none;
+    text-align: center;
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .event-wrap {
+    position: absolute;
+    top: 86%;
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* X축에서 정확히 중앙으로 이동 */
+    width: 80%; /* 너비를 적절하게 설정 */
+    display: block;
+    text-align: center; /* 내용 가운데 정렬 */
+  }
+
+  .event-form button {
+    margin-top: 45px;
+    max-width: 250px;
+    width: 100%;
+    padding: 8px;
+    background-color: #dec6a1;
+    border: none;
+    border-radius: 70px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .name-flex label, .phone-flex label {
+    width: 60px;
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+  }
+
+  .event-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 280px;
+    width: 100%;
+  }
+}
+@media screen and (max-width:660px) {
+  .event-wrap{
+    top: 87%;
+  }
+  .event-form button {
+    margin-top: 5px;
+    max-width: 250px;
+    width: 100%;
+    padding: 8px;
+    background-color: #dec6a1;
+    border: none;
+    border-radius: 70px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  
+}
+@media screen and (max-width:620px) {
+  .event-form button {
+    margin-top: 0px;
+    max-width: 210px;
+    width: 100%;
+    padding: 5px;
+    background-color: #dec6a1;
+    border: none;
+    border-radius: 70px;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.event-wrap{
+  top: 85%;
+}
+.submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.name-flex label, .phone-flex label {
+  width: 60px;
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+}
+@media screen and (max-width:560px) {
+  .event-form button {
+    margin-top: 0px;
+    max-width: 210px;
+    width: 100%;
+    padding: 5px;
+    background-color: #dec6a1;
+    border: none;
+    border-radius: 70px;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.event-wrap{
+  top: 85%;
+}
+.submitbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.name-flex label, .phone-flex label {
+  width: 60px;
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+}
+@media screen and (max-width:510px){
+  .event-wrap{
+    top: 84%;
+    padding: 8px;
+  }
+  .name-flex label, .phone-flex label {
+    width: 55px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.event-form input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 280px;
+  width: 100%;
+}
+}
+@media screen and (max-width:460px){
+  .name-flex label, .phone-flex label {
+    width: 40px;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.event-form input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  min-width: 200px;
+  width: 100%;
+}
+.event-form button {
+  margin-top: 0px;
+  max-width: 170px;
+  width: 100%;
+  padding: 3px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+}
+@media screen and (max-width:410px){
+  .event-form {
+    padding: 3px;
+}
+.event-form button {
+  margin-top: 0px;
+  max-width: 150px;
+  width: 100%;
+  padding: 3px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.name-flex label, .phone-flex label {
+  width: 40px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+.event-form input {
+  flex: 1;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  min-width: 100px;
+  width: 80%;
+}
+
+}
+@media screen and (max-width: 365px) {
+  .event-form {
+    padding: 2px;
+}
+.event-form button {
+  margin-top: 0px;
+  max-width: 120px;
+  width: 100%;
+  padding: 3px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.name-flex label, .phone-flex label {
+  width: 30px;
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+.event-form input {
+  flex: 1;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 100px;
+  width: 80%;
+}
+.success-message {
+  
+  text-align: center;
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+}
+
+  
+@media screen and (max-width: 320px) {
+  .event-form {
+    padding: 2px;
+}
+.event-form button {
+  margin-top: 0px;
+  max-width: 120px;
+  width: 100%;
+  padding: 3px;
+  background-color: #dec6a1;
+  border: none;
+  border-radius: 70px;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.name-flex label, .phone-flex label {
+  width: 30px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+.event-form input {
+  flex: 1;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 100px;
+  width: 80%;
+}
+.success-message {
+  
+  text-align: center;
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+}

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T2MBTNLB");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO 적용 -->
+    <meta name="description" content="미닉스, 미닉스 미니건조기 PRO+,건조기, 미니건조기, 생활가전, 빨래, 세탁" />
+    <meta name="keywords" content="미닉스, 미닉스 미니건조기 PRO+, 건조기, 미니건조기, 생활가전, 빨래, 세탁" />
+    <meta property="og:title" content="미닉스 미니건조기 PRO+" />
+    <meta property="og:description" content="미닉스, 미닉스 미니건조기 PRO+, 건조기, 미니건조기, 생활가전, 빨래, 세탁" />
+    <!-- 버셀 주소 -->
+    <meta property="og:image" content="https://project-2team-minix.vercel.app/images/logo.png" />
+    <meta property="og:url" content="https://project-2team-minix.vercel.app/" />
+    <meta property="og:site_name" content="미닉스 미니건조기 PRO+" />
+    <meta property="og:type" content="website" />
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon//site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- css적용 -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- swiper css적용 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- js -->
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/jquery-1.12.3.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- AOS.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- js -->
+    <script src="js/header.js"></script>
+    <script src="js/main_video.js"></script>
+    <script src="js/introduction.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/modal.js"></script>
+    <title>미닉스 미니건조기 PRO+</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZJCPKBHGR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9ZJCPKBHGR");
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2MBTNLB" height="0" width="0" style="display: none; visibility: hidden"> </iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- 모달 구조 -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <!-- 첫 번째 이미지 -->
+        <img src="images/modalimg1.png" alt="이벤트 팝업 이미지" id="modalImage" />
+        <!-- 두 번째 '오늘 하루 열지 않음'과 닫기 버튼 -->
+        <div class="close-wrap">
+          <label><input type="checkbox" id="notToday" /><span class="notToday">오늘 하루 열지않음</span></label>
+          <span class="close-btn">&times;</span>
+        </div>
+      </div>
+    </div>
+    <!-- 구매하기 fix버튼 -->
+    <div class="fix-buy-btn fixBtn">
+      <a href="product_page.html">
+        <!-- 구매<br>하기 -->
+        <img src="images/fix-buy-btn.png" alt="구매하기 고정버튼" />
+        <img src="images/fix-buy-btn-hover.png" alt="구매하기 고정버튼 호버" />
+      </a>
+    </div>
+    <!-- csbtn -->
+    <div class="cs-btn-event fixBtn">
+      <div class="tooltip">
+        <!-- <img src="images/Rectangle.png" alt="말풍선 이미지" /> -->
+        <span class="tooltip-text">이벤트참여</span>
+      </div>
+      <a href="#" class="event-btn fixBtn">
+        <img src="images/eventbtn.png" alt="이벤트버튼" />
+      </a>
+    </div>
+
+    <div class="cs-btn fixBtn">
+      <img src="images/cs_btn.png" alt="고객센터" />
+    </div>
+    <div class="cs-btn-kakao fixBtn">
+      <img src="images/cs-kakao.png" alt="카카오톡" />
+    </div>
+    <div class="cs-btn-naver fixBtn">
+      <img src="images/cs-naver.png" alt="네이버톡" />
+    </div>
+    <!-- topBtn -->
+    <div class="top-btn fixBtn">
+      <img src="images/top_btn.png" alt="탑버튼" />
+    </div>
+    <!-- 전체 레이아웃 -->
+    <div class="wrap">
+      <!-- header -->
+      <div class="header">
+        <a href="#" class="logo">
+          <img src="images/logo2.png" alt="메인 로고" />
+        </a>
+      </div>
+      <div class="mb-header">
+        <a href="#" class="mb-logo">
+          <img src="images/logo.png" alt="모바일 로고" />
+        </a>
+        <a href="product_page.html  " class="mb-buy-btn">
+          <img src="images/buy-btn2.png" alt="구매하기" />
+        </a>
+      </div>
+      <!-- main video -->
+      <div class="visual">
+        <div class="swiper sw-visual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video class="visual-video" muted playsinline webkit-playsinline>
+                <source src="video/main-video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="visual-video" muted playsinline webkit-playsinline>
+                <source src="video/main-video2.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+        <a href="product_page.html  " class="buy-img">
+          <img src="images/buy-btn.png" alt="구매하기 버튼" />
+        </a>
+        <div class="next-sec-btn">
+          <img src="images/next_sec_btn.png" alt="다음 영역" />
+        </div>
+      </div>
+      <!-- introduction -->
+      <div class="introduction">
+        <!-- section1 -->
+        <div class="sec1_wrap" id="sec1">
+          <div class="sec1_bg">
+            <div class="sec1_inner">
+              <h2 class="sec1_title">
+                정말 해를 볼 날이 없게 되는
+                <span class="highlight">장마철</span>
+                <br />
+                빨래할 때마다 <span class="highlight">고민</span> 되시나요?
+              </h2>
+              <div class="bubbles">
+                <div class="bubble_left">
+                  <div class="bubble sp_bb1" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/bubble1.png" alt="장마철이라 빨래가 마르는데 너무 오래걸려요" />
+                  </div>
+                  <div class="bubble sp_bb3" data-aos="fade-up" data-aos-delay="900">
+                    <img src="images/bubble3.png" alt="대형 건조기를 놓을데가 없어요" />
+                  </div>
+                  <div class="bubble sp_bb5" data-aos="fade-up" data-aos-delay="1500">
+                    <img src="images/bubble5.png" alt="시끄러워서 건조기를 못돌려 놓겠어요" />
+                  </div>
+                </div>
+                <div class="bubble_right">
+                  <div class="bubble sp_bb2" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/bubble2.png" alt="매번 건조대에 널기 너무 귀찮아요" />
+                  </div>
+                  <div class="bubble sp_bb4" data-aos="fade-up" data-aos-delay="1200">
+                    <img src="images/bubble4.png" alt="빨래가 마르지 않아서 냄새가 나요" />
+                  </div>
+                </div>
+                <div class="bubble_colums">
+                  <div class="bb_colums" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/buble1_colums.png" alt="테블릿" />
+                  </div>
+                  <div class="bb_colums" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/buble2_colums.png" alt="테블릿" />
+                  </div>
+                  <div class="bb_colums" data-aos="fade-up" data-aos-delay="900">
+                    <img src="images/buble3_colums.png" alt="테블릿" />
+                  </div>
+                  <div class="bb_colums" data-aos="fade-up" data-aos-delay="1200">
+                    <img src="images/buble4_colums.png" alt="테블릿" />
+                  </div>
+                  <div class="bb_colums" data-aos="fade-up" data-aos-delay="1500">
+                    <img src="images/buble5_colums.png" alt="테블릿" />
+                  </div>
+                </div>
+              </div>
+              <div class="next-sec-btn2">
+                <img src="images/next_sec_btn.png" alt="다음 영역" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 메인카피 -->
+        <div class="main_copy">
+          <div class="copy_box">
+            <img src="images/main_copy_web.png" alt="메인카피" class="mcp_web" />
+            <img src="images/main_copy.png" alt="메인카피" class="mcp_tab" />
+          </div>
+        </div>
+        <!-- 강점 3가지 -->
+        <div class="strength_wrap">
+          <div class="strength_inner">
+            <div class="item-box">
+              <div class="image-box1">
+                <img src="images/04_10.gif" alt="강점1" />
+              </div>
+              <div class="txt-box1">
+                <p class="m_txt">"작아도 강하다!"</p>
+                <p class="grey_txt">"미니멀한 공간 속 강력한 성능!"</p>
+              </div>
+            </div>
+            <div class="item-box">
+              <div class="image-box2">
+                <img src="images/1-5.gif" alt="강점2" />
+              </div>
+              <div class="txt-box2">
+                <p class="m_txt">"소음은 줄이고 편안함은 높이고"</p>
+                <p class="grey_txt">"조용함 속에서 즐기는 스마트 라이프"</p>
+              </div>
+            </div>
+            <div class="item-box">
+              <div class="image-box3">
+                <img src="images/1-6.gif" alt="강점3" />
+              </div>
+              <div class="txt-box3">
+                <p class="m_txt">"짧아진 시간, 길어진 휴식"</p>
+                <p class="grey_txt">"소중한 시간을 아끼는 현명한 선택"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 비교 섹션 -->
+        <div class="compare_wrap">
+          <div class="compare">
+            <!-- 기본 이미지 -->
+            <img src="images/compare.png" alt="비교이미지" class="compare-img default-img" />
+            <!-- 대체 이미지 (768px 이하에서 보이는 이미지) -->
+            <img src="images/compare360(1).png" alt="비교이미지 모바일" class="compare-img mobile-img1" />
+            <img src="images/compare360(2).png" alt="비교이미지 모바일" class="compare-img mobile-img2" />
+          </div>
+        </div>
+        <!-- 구매 버튼 -->
+        <div class="bbtn-container">
+          <button class="bbtn">
+            <a href="product_page.html" class="btn_txt">구매하러 가기</a>
+          </button>
+        </div>
+        <!-- 갤러리 섹션 -->
+        <div class="pp-descriptions" id="pp-descriptions">
+          <div class="pp-det-wrap">
+            <div class="pp-det-bg">
+              <div class="pp-det-inner">
+                <div class="pp-det-title">
+                  <img src="images/pt_title.png" alt="타이틀" />
+                </div>
+                <!-- 텍스트 설명 -->
+                <div class="pp-det-txtwrap">
+                  <div class="sub1-txt1"><p>구김방지</p></div>
+                  <div class="sub1-txt2"><p>99.9% UV-C 살균</p></div>
+                  <div class="sub1-txt3"><p>의류관리 기능</p></div>
+                  <div class="sub1-txt4"><p>온풍건조 시스템</p></div>
+                  <div class="sub1-txt5"><p>저소음 + 저진동</p></div>
+                  <div class="sub1-txt6"><p>간편한 필터 청소</p></div>
+                </div>
+                <!-- 이미지 갤러리 -->
+                <div class="pp-det-imgwrap">
+                  <ul class="gallery">
+                    <li style="background-image: url(../images/2-1.gif)">
+                      <div class="contants">
+                        <h2>구김방지</h2>
+                        <p>"구김 없이 바로 꺼내 입으세요."</p>
+                      </div>
+                    </li>
+                    <li style="background-image: url(../images/1-2.gif)">
+                      <div class="contants">
+                        <h2>99.9% UV-C 살균</h2>
+                        <p>"진드기, 꽃가루 완벽 살균!"</p>
+                      </div>
+                    </li>
+                    <li style="background-image: url(../images/1-6.gif)">
+                      <div class="contants">
+                        <h2>의류관리 기능</h2>
+                        <p>소중한 옷 데일리로 관리하세요.</p>
+                      </div>
+                    </li>
+                    <li style="background-image: url(../images/1-4.gif)">
+                      <div class="contants">
+                        <h2>온풍건조 시스템</h2>
+                        <p>울, 니트 줄어듬 방지!</p>
+                      </div>
+                    </li>
+                    <li style="background-image: url(../images/1-5.gif)">
+                      <div class="contants">
+                        <h2>저소음 + 저진동</h2>
+                        <p>전자레인지 보다 조용한!</p>
+                      </div>
+                    </li>
+                    <li style="background-image: url(../images/2-4.gif)">
+                      <div class="contants">
+                        <h2>간편한 필터 청소</h2>
+                        <p>가볍게 먼지만 털어내세요.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 스와이퍼 슬라이더 (초기에는 숨김) -->
+                <div class="swiper sw-gallery">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slide_img_box">
+                        <img src="../images/swiper1.gif" alt="스와이퍼1" />
+                        <div class="contants">
+                          <h2>구김방지</h2>
+                          <p>"구김 없이 바로 꺼내 입으세요."</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img_box">
+                        <img src="../images/swiper2.gif" alt="스와이퍼2" />
+                        <div class="contants">
+                          <h2>99.9% UV-C 살균</h2>
+                          <p>"진드기, 꽃가루 완벽 살균!"</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img_box">
+                        <img src="../images/swiper3.gif" alt="스와이퍼3" />
+                        <div class="contants">
+                          <h2>의류관리 기능</h2>
+                          <p>소중한 옷 데일리로 관리하세요.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img_box">
+                        <img src="../images/swiper4.gif" alt="스와이퍼4" />
+                        <div class="contants">
+                          <h2>온풍건조 시스템</h2>
+                          <p>울, 니트 줄어듬 방지!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img_box">
+                        <img src="../images/swiper5.gif" alt="스와이퍼5" />
+                        <div class="contants">
+                          <h2>저소음 + 저진동</h2>
+                          <p>전자레인지 보다 조용한!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img_box">
+                        <img src="../images/swiper6.gif" alt="스와이퍼6" />
+                        <div class="contants">
+                          <h2>간편한 필터 청소</h2>
+                          <p>가볍게 먼지만 털어내세요.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 스와이퍼 내비게이션 -->
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <!-- 구매 버튼 -->
+              <div class="bbtn-container2">
+                <button class="bbtn2" id="bbtn-color2">
+                  <a href="product_page.html" class="btn_txt2">구매하러 가기</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 제품 판매량 영역 -->
+        <section class="det2">
+          <div class="inner">
+            <div class="det2-top">
+              <h1>그동안 <br />미닉스 미니건조기 PRO+는</h1>
+            </div>
+            <!-- 섹션2 메인 -->
+            <div class="det2-main">
+              <!-- 메인1 -->
+              <div class="det2-main1">
+                <div class="det2-main1-1 rank">
+                  <span class="small">누적 판매량</span>
+                  <div class="test1">
+                    <p class="big">
+                      <span class="number">125,000</span>
+                    </p>
+                    <span class="date">(2024.08.25 기준)</span>
+                  </div>
+                </div>
+                <div class="det2-main2-1 rank">
+                  <span class="small">누적 리뷰수</span>
+                  <div class="test2">
+                    <p class="big">
+                      <span class="number">38,344</span>
+                    </p>
+                    <span class="date">(2024.08.29 기준)</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 메인2 -->
+              <div class="det2-main2">
+                <div class="det2-main1-2 rank">
+                  <span class="small">판매율</span>
+                  <div class="test3">
+                    <p class="big">
+                      <span class="number">17</span>
+                      <span class="smallp">분에</span>
+                      <span class="one">1</span>
+                      <span class="smallp">대</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="det2-main2-2 rank">
+                  <span class="small">네이버 고객 만족도</span>
+                  <div class="test4">
+                    <p class="big"><span class="number">4.9</span><span class="one">점</span></p>
+                    <span class="middlep">/5점</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- 리뷰 -->
+      <div class="review">
+        <div class="review_title">
+          <img src="images/review_title.png" alt="리뷰 제목" />
+        </div>
+        <div class="review_inner">
+          <div class="review_bg">
+            <div class="review_item" data-aos="fade-up" data-aos-delay="300" id="review_item1">
+              <img src="images/review1_txtup.png" alt="리뷰 1" />
+            </div>
+            <div class="review_item" data-aos="fade-up" data-aos-delay="600">
+              <img src="images/review2_txtup.png" alt="리뷰 2" />
+            </div>
+            <div class="review_item" data-aos="fade-up" data-aos-delay="900">
+              <img src="images/review3_txtup.png" alt="리뷰 3" />
+            </div>
+            <div class="review_txtUp" data-aos="fade-up" data-aos-delay="300">
+              <img src="images/review1_txtup.png" alt="txtUp1" />
+            </div>
+            <div class="review_txtUp" data-aos="fade-up" data-aos-delay="300">
+              <img src="images/review2_txtup.png" alt="txtUp2" />
+            </div>
+            <div class="review_txtUp" data-aos="fade-up" data-aos-delay="300">
+              <img src="images/review3_txtup.png" alt="txtUp3" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 이벤트 섹션 -->
+      <section class="event" id="event">
+        <div class="inner">
+          <!-- 반응형일 때 나오는 이벤트 섹션 요소 -->
+          <div class="image-container-tab">
+            <!-- 반응형 이벤트 이미지 -->
+            <img src="images/event7681.png" alt="반응형 이벤트 이미지" />
+            <div class="event-wrap">
+              <div class="event-form overlay-content">
+                <div class="line-heightwrap">
+                  <div class="name-flex">
+                    <label for="name" class="name">성함</label>
+                    <input type="text" id="name" placeholder="성함을 입력하세요" required />
+                  </div>
+                  <div class="phone-flex">
+                    <label for="phone" class="phone">번호</label>
+                    <input type="text" id="phone" placeholder="휴대폰 번호를 입력하세요" required />
+                  </div>
+                </div>
+                <div class="submitbtn">
+                  <button id="submitButton">이벤트 참여하기</button>
+                </div>
+                <div class="success-message">이벤트 참여가 완료되었습니다!</div>
+              </div>
+            </div>
+          </div>
+          <!-- 이미지와 폼을 담고 있는 컨테이너 -->
+          <div class="image-container">
+            <!-- 이벤트 이미지 -->
+            <img src="images/event1.png" alt="이벤트 이미지" class="responsive-image" />
+            <!-- 이벤트 참여 폼을 이미지 위에 배치 -->
+            <div class="event-wrap">
+              <div class="event-form overlay-content">
+                <div class="name-flex">
+                  <label for="name" class="name">성함</label>
+                  <input type="text" id="name" placeholder="성함을 입력하세요" required />
+                </div>
+                <div class="phone-flex">
+                  <label for="phone" class="phone">번호</label>
+                  <input type="text" id="phone" placeholder="휴대폰 번호를 입력하세요" required />
+                </div>
+                <div class="submitbtn">
+                  <button id="submitButton">이벤트 참여하기</button>
+                </div>
+                <div class="success-message">이벤트 참여가 완료되었습니다!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 구매 버튼 -->
+      <div class="bbtn-container" id="bbtnid">
+        <button class="bbtn">
+          <a href="product_page.html" class="btn_txt">구매하러 가기</a>
+        </button>
+      </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="inner">
+          <!-- 푸터 상단 -->
+          <div class="footer_top">
+            <div class="ft_logo">
+              <a href="index.html"><img src="images/ft_logo.png" alt="푸터로고" /></a>
+            </div>
+            <div class="ft_sns">
+              <a href="https://www.instagram.com/minix_official/" target="_blank"><img src="images/sns_1.png" alt="인스타" /></a>
+              <a href="https://www.youtube.com/channel/UCgJPrvT1mi5_JnOiqhqbbkg" target="_blank"><img src="images/sns_2.png" alt="유튜브" /></a>
+            </div>
+          </div>
+          <!-- 푸터 하단 -->
+          <div class="footer_bot">
+            <div class="ft_left">
+              <!-- 각 리스트 간의 간격 설정 -->
+              <ul class="ft_lefttxt1">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">고객센터</a></li>
+              </ul>
+              <ul class="ft_lefttxt2">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">구매후기</a></li>
+                <li><a href="#">구매문의</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </div>
+            <div class="ft_right">
+              <div class="ft_right_txt">
+                <p class="ft_right_txt1">
+                  상호. 주식회사앳홈 / CEO. 양정호 / 사업자등록번호. 136-81-34676
+                  <span class="check"><a href="#">[사업자정보확인]</a></span
+                  ><br />
+                  통신판매업신고번호. 제2020-서울성동-01979호 / 개인정보관리책임자. 양정호 / 이메일. minix@athomecorp.com<br />
+                  주소. 04778 10층, 서울 성동구 뚝섬로1길 63 영창디지털타워 / Hosting by Cafe24
+                </p>
+                <p class="ft_right_txt2">고객센터. 1800-6307 / 평일 (토,일,공휴일 휴무) 오전 9시~12시, 오후 1시~6시</p>
+                <p class="ft_right_copyright">COPYRIGHT ©2022 미닉스 공식몰. ALL RIGHTS RESERVED.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer - 768 -->
+      <div class="footer-tab">
+        <div class="inner">
+          <div class="footer-tab-top">
+            <a href="index.html"><img src="images/ft_logo.png" alt="푸터로고" /></a>
+          </div>
+          <div class="footer-tabtxt">
+            <div class="footer-tabtxt1">
+              <ul>
+                <li>공지사항</li>
+                <li>자주묻는질문</li>
+                <li>구매후기</li>
+                <li>구매문의</li>
+                <li>이벤트</li>
+              </ul>
+            </div>
+            <div class="footer-tabtxt2">
+              <ul>
+                <li>회사소개</li>
+                <li>브랜드스토리</li>
+                <li>이용약관</li>
+                <li class="under">개인정보처리방침</li>
+                <li>이용안내</li>
+                <li>고객센터</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-tab-bot">
+            <div class="footer-tab-bottxt1">
+              <li>
+                상호. 주식회사앳홈 / CEO. 양정호 / 사업자등록번호. 136-81-34676
+                <span class="check"><a href="#">[사업자정보확인]</a></span>
+              </li>
+              <li>통신판매업신고번호. 제2020-서울성동-01979호 /</li>
+              <li>개인정보관리책임자. 양정호 / 이메일. minix@athomecorp.com</li>
+              <li>주소. 04778 10층, 서울 성동구 뚝섬로1길 63 영창디지털타워 / Hosting by Cafe24</li>
+            </div>
+            <div class="footer-tab-bottxt2">고객센터. 1800-6307 / 평일 (토,일,공휴일 휴무) 오전 9시~12시, 오후 1시~6시</div>
+            <div class="footer-tab-botcopy">COPYRIGHT ©2022 미닉스 공식몰. ALL RIGHTS RESERVED.</div>
+          </div>
+          <div class="ft_tab_sns">
+            <a href="https://www.instagram.com/minix_official/" target="_blank"><img src="images/sns_1.png" alt="인스타" /></a>
+            <a href="https://www.youtube.com/channel/UCgJPrvT1mi5_JnOiqhqbbkg" target="_blank"><img src="images/sns_2.png" alt="유튜브" /></a>
+          </div>
+        </div>
+        <!-- 320 푸터 텍스트 위치 조정 -->
+        <div class="footer-320txt">
+          <div class="footer-320txt1">
+            <ul>
+              <li>회사소개</li>
+              <li>브랜드스토리</li>
+              <li>이용약관</li>
+              <li class="under" id="under">개인정보처리방침</li>
+              <li>이용안내</li>
+              <li>고객센터</li>
+            </ul>
+          </div>
+          <div class="footer-320txt2">
+            <ul>
+              <li>공지사항</li>
+              <li>자주묻는질문</li>
+              <li>구매후기</li>
+              <li>구매문의</li>
+              <li>이벤트</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-320-bot">
+          <div class="footer-320-bottxt1">
+            <li>상호. 주식회사앳홈 / CEO. 양정호</li>
+            <li>
+              사업자등록번호. 136-81-34676
+              <span class="check"><a href="#">[사업자정보확인]</a></span>
+            </li>
+            <li>통신판매업신고번호. 제2020-서울성동-01979호 /</li>
+            <li>개인정보관리책임자. 양정호</li>
+            <li>이메일. minix@athomecorp.com</li>
+            <li>주소. 04778 10층,</li>
+            <li>서울 성동구 뚝섬로1길 63 영창디지털타워</li>
+            <li>Hosting by Cafe24</li>
+          </div>
+          <div class="footer-320-bottxt2">
+            <li>고객센터. 1800-6307</li>
+            <li class="footer-320-date">평일 (토,일,공휴일 휴무) 오전 9시~12시, 오후 1시~6시</li>
+          </div>
+          <div class="footer-320-botcopy">COPYRIGHT ©2022 미닉스 공식몰. ALL RIGHTS RESERVED.</div>
+        </div>
+        <div class="ft_320_sns">
+          <a href="https://www.instagram.com/minix_official/" target="_blank"><img src="images/sns_1.png" alt="인스타" /></a>
+          <a href="https://www.youtube.com/channel/UCgJPrvT1mi5_JnOiqhqbbkg" target="_blank"><img src="images/sns_2.png" alt="유튜브" /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
